@@ -11,7 +11,12 @@
 |
 */
 
+use Illuminate\Support\Facades\DB;
+
 Route::get('/happy-mashujaa-day', function () {
+    \App\Count::updateOrCreate(['id'=> 1,],[
+       'count' => DB::raw('count + 1')
+    ]);
     return view('welcome');
 });
 Route::post('/share',function (\Illuminate\Http\Request $request){
