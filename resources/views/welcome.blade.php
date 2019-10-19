@@ -16,7 +16,7 @@
     </head>
     <body>
             <div class="col-md-12">
-                    <form method="post" action="/share">
+                    <form style="margin-top: 2px" method="post" action="/share">
                         {{csrf_field()}}
                         <div class="form-group">
                             <input name="name" id="name" class="col-md-5 form-control" type="text" placeholder="enter name" required>
